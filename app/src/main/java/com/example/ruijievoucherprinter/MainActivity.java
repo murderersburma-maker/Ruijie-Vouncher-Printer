@@ -204,7 +204,7 @@ public class MainActivity extends Activity {
         if(!p.quota.isEmpty())b.write(("Quota: "+safe(p.quota)+"\n").getBytes("UTF-8"));
         if(!p.upload.isEmpty())b.write(("Upload: "+safe(p.upload)+"\n").getBytes("UTF-8"));
         if(!p.download.isEmpty())b.write(("Download: "+safe(p.download)+"\n").getBytes("UTF-8"));
-        b.write("Thank you for using our Wi-Fi\n".getBytes("UTF-8"));
+        b.write("Oishi-Restaurant\n".getBytes("UTF-8"));
         b.write("------------------------------\n".getBytes("UTF-8"));b.write(new byte[]{0x1B,0x61,0x00});
         return b.toByteArray();
     }
