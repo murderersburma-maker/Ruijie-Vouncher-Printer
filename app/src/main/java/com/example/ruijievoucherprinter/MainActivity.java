@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
         TextView help=label("Paste one code per line. Select the User Group above to assign it to every pasted code.");root.addView(help);
         codeInput=new EditText(this);codeInput.setHint("38084063\n48184177\n44572610");codeInput.setMinLines(3);codeInput.setGravity(48);codeInput.setTextSize(15);root.addView(codeInput);
         Button addCodes=button("Add pasted codes");addCodes.setOnClickListener(v->addPastedCodes());root.addView(addCodes);
-        Button import=button("Import CSV file");import.setOnClickListener(v->{Intent i=new Intent(Intent.ACTION_OPEN_DOCUMENT);i.addCategory(Intent.CATEGORY_OPENABLE);i.setType("*/*");startActivityForResult(i,PICK_CSV);});root.addView(import);
+        Button importButton=button("Import CSV file");importButton.setOnClickListener(v->{Intent i=new Intent(Intent.ACTION_OPEN_DOCUMENT);i.addCategory(Intent.CATEGORY_OPENABLE);i.setType("*/*");startActivityForResult(i,PICK_CSV);});root.addView(importButton);
 
         root.addView(label("VOUCHERS"));
         Button all=button("Select all vouchers");all.setOnClickListener(v->{for(int i=0;i<voucherList.getChildCount();i++){View c=voucherList.getChildAt(i);if(c instanceof CheckBox)((CheckBox)c).setChecked(true);}});root.addView(all);
